@@ -66,7 +66,7 @@
     name: 'src-components-formulario',
     props: [],
     mounted () {
-
+      this.resetForm()
     },
     data () {
       return {
@@ -113,17 +113,22 @@
               console.log('HTTP GET ERROR', error)
             }
         },
-        async enviar() {
+        enviar() {
             this.$v.$touch()
             if(!this.$v.$invalid) {
-              let form = this.f
+              let form = {
+                nombre: this.$v.f.nombre.$model,
+                importe: this.$v.f.importe.$model,
+                descripcion: this.$v.f.descripcion.$model
+              }
               console.log(form)
-              await this.sendDatosFormAxios(form)
+              this.sendDatosFormAxios(form)
               this.f = this.resetForm()
               this.$v.$reset()
             }
         },
         resetForm() {
+         
             return {
                nombre: '',
                descripcion : '',

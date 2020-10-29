@@ -66,6 +66,7 @@
       }
     },
     methods: {
+
       colorSubtotal() {
         if(this.presupuesto < this.subtotal){
           return 'red';
