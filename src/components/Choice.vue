@@ -7,12 +7,11 @@
                 <th scope="col">Pregunta</th>
                 <th scope="col">Respuestas</th>
             </tr>
-            <tr class=""
-            v-for="(pregunta, index) in preguntas"
-            :key="index">
-                <td scope="col"><p>{{ pregunta.pregunta }}</p></td>
-                <td scope="col"><p>{{ pregunta.respuestas }}</p></td>                     
-            </tr>
+
+            <tr v-for="(pregunta, i) in preguntas" :key="i">
+            <td>{{pregunta.pregunta}}</td>
+            <td>{{pregunta.respuestas.join()}}</td>
+          </tr>
           </table>
   </section>
 

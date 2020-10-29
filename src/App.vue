@@ -1,8 +1,6 @@
 <template>
   <div id="app" class="container-fluid">
     <div class="jumbotron">
-      <h1>NT2-Primer Parcial</h1>
-      <br>
       <Navbar />
       <router-view />
     </div>
