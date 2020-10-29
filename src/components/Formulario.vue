@@ -128,7 +128,7 @@
             }
         },
         resetForm() {
-         
+      
             return {
                nombre: '',
                descripcion : '',
